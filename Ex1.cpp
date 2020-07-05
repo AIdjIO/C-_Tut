@@ -117,9 +117,9 @@ int main(){
 	//C++ ASSIGNMENT OPERATORS;
 	xxx += 5; 
 	/*
-		=	x = 5	x = 5	
-		+=	x += 3	x = x + 3	
-		-=	x -= 3	x = x - 3	
+		=	x = 5	x = 5		assign
+		+=	x += 3	x = x + 3	add
+		-=	x -= 3	x = x - 3	subtract
 		*=	x *= 3	x = x * 3	multiply
 		/=	x /= 3	x = x / 3	divide
 		%=	x %= 3	x = x % 3	modulo
@@ -133,19 +133,22 @@ int main(){
 	//C++ COMPARISON OPERATORS
 	cout << (sum1 > sum2) << endl;
 	/*
-	==	Equal to	x == y	
-	!=	Not equal	x != y	
-	>	Greater than	x > y	
-	<	Less than	x < y	
+	==	Equal to					x == y	
+	!=	Not equal					x != y	
+	>	Greater than				x > y	
+	<	Less than					x < y	
 	>=	Greater than or equal to	x >= y	
-	<=	Less than or equal to	x <= y
+	<=	Less than or equal to		x <= y
 	*/
 	
 	//C++ LOGICAL OPERATORS#
 	/*
-	&& 	Logical and	Returns true if both statements are true	x < 5 &&  x < 10	
-	|| 	Logical or	Returns true if one of the statements is true	x < 5 || x < 4	
-	!	Logical not	Reverse the result, returns false if the result is true	!(x < 5 && x < 10)
+	&& 	Logical and	Returns true if both statements are true
+		x < 5 &&  x < 10	
+	|| 	Logical or	Returns true if one of the statements is true
+		x < 5 || x < 4	
+	!	Logical not	Reverse the result, returns false if the result is true
+		!(x < 5 && x < 10)
 	*/
 	
 	//C++ STRING CONCATENATION
@@ -341,9 +344,39 @@ int main(){
 	}
 	
 	//C++ ARRAYS
-	//string cars[4]; // array declaration to hold 4 strings.
-	string cars[4] = {"Volvo","BMW","Ford","Mazda"}; //declaration and initialiasation
+	//string cars[4]; // array declaration to hold 4 strings (not initialised).
+	string cars[4] = {"Volvo","BMW","Ford","Mazda"}; //declaration and initialisation
 	int arrayNum[3]={10,20,30};
+	//access elements of an array (index starts at 0)
+	cout << cars[0] + "\n";
+	//change an element of an array
+	cars[0]="Opel";
+	cout << cars[0] + "\n";
+	
+	//C++ ARRAYS AND LOOPS
+	//array elements
+	for (int i=0; i<4; i++){
+		cout << cars[i] << "\n";
+	}
+	
+	//array index and elements
+	for (int i=0; i<4; i++){
+		cout << i << ": " << cars[i] << "\n";
+	}
+	
+	//C++ OMIT ARRAY SIZE
+	string vehicle[]={"Volvo", "BMW", "Ford"}; //size of array is now fixed to 3
+	//if need to add extra elements then neew to overwrite the array
+	string vehicles={"Vovlvo", "BMW", "Ford", "Mazda", "Tesla"};
+	//if specify size extra space will be reserved
+	string newVehicle[5] = {"Volvo", "BMW", "Ford"};
+	newVehicle[3]={"Mazda"};
+	newVehicle[4]={"Tesla"};
+	//omit elements on declaration
+	string oldVehicle[5];
+	oldVehicle[0]={"Volvo"};
+	oldVehicle[1]={"BMW"};
+	
 	
 	return 0;
 }
