@@ -121,7 +121,7 @@ int main(){
 		-=	x -= 3	x = x - 3	
 		*=	x *= 3	x = x * 3	multiply
 		/=	x /= 3	x = x / 3	divide
-		%=	x %= 3	x = x % 3	module
+		%=	x %= 3	x = x % 3	modulo
 		&=	x &= 3	x = x & 3	bitwise AND
 		|=	x |= 3	x = x | 3	bitwise OR
 		^=	x ^= 3	x = x ^ 3	bitwise XOR
