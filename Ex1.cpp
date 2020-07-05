@@ -264,30 +264,86 @@ int main(){
 	
 	//C++ SWITCH
 	int day = 4;
-	switch (day) {
-	  case 1:
-		cout << "Monday";
-		break;
-	  case 2:
-		cout << "Tuesday";
-		break;
-	  case 3:
-		cout << "Wednesday";
-		break;
-	  case 4:
-		cout << "Thursday";
-		break;
-	  case 5:
-		cout << "Friday";
-		break;
-	  case 6:
-		cout << "Saturday";
-		break;
-	  case 7:
-		cout << "Sunday";
-		break;
+	switch (day){
+		case 1:
+			cout << "Monday";
+			break; // breaks out of the switch block (no need to test other cases when match is found), however "break is optional but highly recommended.
+		case 2:
+			cout << "Tuesday";
+			break;
+		case 3:
+			cout << "Wednesday";
+			break;
+		case 4:
+			cout << "Thursday";
+			break;
+		case 5:
+			cout << "Friday";
+			break;
+		case 6:
+			cout << "Saturday";
+			break;
+		case 7:
+			cout << "Sunday";
+			break;
+		default: // code to run if no match is found.
+			cout << "Holiday";
 	}
 	cout << "\n";
+	
+	//C++ WHILE LOOP
+	int i = 0;
+	while (i<5) {
+		cout << i << "\n";
+		i++;
+	}
+	
+	//C++ DO WHILE LOOP
+	int j = 0;
+	do {
+		cout << j << "\n";
+		j++;
+	} while (j < 5);
+	
+	//C++ FOR LOOP
+	/*
+	for (statement 1; statement 2; statement 3) {
+		code block to be executed
+		}
+	Statement 1 is executed (one time) before the execution of the code block.
+	Statement 2 defines the condition for executing the code block.
+	Statement 3 is executed (every time) after the code block has been executed.
+	*/
+	
+	for (int i = 0; i<5; i++){
+		cout << i << "\n";
+	}
+	
+	for (int i = 0; i<=10; i++){
+		cout << i << "\n";
+	}
+	
+	//C++ BREAK AND CONTINUE
+	//break (can also be used in while loop)
+	for (int i = 0; i < 10; i++){
+		if (i == 4){
+			break; // breaks out of the loop
+		}
+		cout << i << "\n";
+	}
+	
+	//continue (can also be used in while loop)
+	for (int i = 0; i < 10; i++){
+		if (i == 4){
+			continue; //(jumps to the next interation)
+		}
+		cout << i << "\n";
+	}
+	
+	//C++ ARRAYS
+	//string cars[4]; // array declaration to hold 4 strings.
+	string cars[4] = {"Volvo","BMW","Ford","Mazda"}; //declaration and initialiasation
+	int arrayNum[3]={10,20,30};
 	
 	return 0;
 }
