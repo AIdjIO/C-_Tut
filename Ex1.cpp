@@ -367,7 +367,7 @@ int main(){
 	//C++ OMIT ARRAY SIZE
 	string vehicle[]={"Volvo", "BMW", "Ford"}; //size of array is now fixed to 3
 	//if need to add extra elements then neew to overwrite the array
-	string vehicles={"Vovlvo", "BMW", "Ford", "Mazda", "Tesla"};
+	string vehicles[]={"Volvo", "BMW", "Ford", "Mazda", "Tesla"};
 	//if specify size extra space will be reserved
 	string newVehicle[5] = {"Volvo", "BMW", "Ford"};
 	newVehicle[3]={"Mazda"};
@@ -376,6 +376,39 @@ int main(){
 	string oldVehicle[5];
 	oldVehicle[0]={"Volvo"};
 	oldVehicle[1]={"BMW"};
+	
+	//C++ REFERENCES
+	string food = "Pizza"; //variable
+	string &meal = food;   //reference to variable
+	cout << food << "\n";
+	cout << meal << "\n";
+	cout << &food << "\n"; //& also gives the address of the variable in memory
+	cout << &meal << "\n"; //this gives the memory address of food becuase it reference it
+	
+	//C++ POINTERS
+	//A pointer is a variable that stores the memory address of a variable of the same type
+	//create pointer
+	string fruit="tomato";
+	string* fruitPointer=&fruit;
+	cout << fruit << "\n"; //output the value of fruit
+	cout << &fruit << "\n"; //output the memory address of fruit
+	cout << fruitPointer << "\n"; //output the memory address of fruit with the pointer.
+	
+	//C++ dereference
+	string drink="coffee";
+	string* ptrDrink = &drink; // '*' here is used to create a variable
+	cout << ptrDrink << "\n";
+	cout << *ptrDrink << "\n"; // '*' is dereference operator
+	
+	//C++ modify pointers
+	string animal = "chicken";
+	string* ptrAnimal = &animal;
+	cout << animal << "\n"; //output the value of animal
+	cout << &animal << "\n"; //output the address of animal
+	cout << *ptrAnimal << "\n"; //access the address of animal and output its value
+	*ptrAnimal = "dog"; //change the value of the pointer
+	cout << *ptrAnimal << "\n"; //output the new value of the pointer
+	cout << animal << "\n"; //output the new value of the aniumal variable
 	
 	
 	return 0;
