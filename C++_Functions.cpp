@@ -76,7 +76,7 @@ int my7thFunction(int x, int y){
 }
 
 //C++ FUNCTION - PASS BY REFERENCE
-//arguments of a function can be passed by reference if there is a need to modify them.
+//argument variables of a function can be passed by reference if there is a need to modify them.
 void swapNums(int &x, int&y){
 	int z= x;
 	x=y;
@@ -120,11 +120,11 @@ int main(){
 	cout << "1st Num: " << firstNum << "\n";
 	cout << "2nd Num: " << secondNum << "\n";
 	
-  int myNum1 = plusFunc(8, 5);
-  double myNum2 = plusFunc(4.3, 6.26);
-  cout << "Int: " << myNum1 << "\n";
-  cout << "Double: " << myNum2 << "\n";
-	
+	int myNum1 = plusFunc(8, 5);
+	double myNum2 = plusFunc(4.3, 6.26);
+	cout << "Int: " << myNum1 << "\n";
+	cout << "Double: " << myNum2 << "\n";
+		
 	return 0;
 }
 
