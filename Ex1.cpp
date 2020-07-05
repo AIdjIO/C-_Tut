@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <cmath>
 using namespace std;
 
 int main(){
@@ -160,7 +161,133 @@ int main(){
 	cout << "The length of the text string is: " << txt.length() << endl; //size() or length() or equivalent
 	
 	//C++ ACCESS STRINGS
-	cout << txt[0]; //outputs a (first character of string starts at index 0)
+	cout << txt[0] << "\n"; //outputs a (first character of string starts at index 0)
+	txt[0] = 'A'; // change string character
+	cout << txt <<"\n";
 	
-return 0;
+	//C++ USER INPUT STRINGS
+	string newName;
+	cout << "Enter your first name: ";
+	cin >> newName; // get user input from keyboard
+	//cin considers a space (whitespace, tabs, etc) as terminating character,
+	//which mean that it can only display a sing word (even if you type many words)
+	cout << "Your name is: " << newName << "\n";
+	
+	//to read a line of text use getline() function instead
+	string urName;
+	cout << "Type your full name: \n";
+	getline(cin, urName);
+	cout << "Your name is: " << urName << "\n";
+	
+	//C++ STRING NAMESPACE
+	//The "using namespace std" can be omitted and replaced with "std::" instead
+	std:cout << "Hello";
+	
+	//C++ MATH
+	cout << max(5,10) << "\n";
+	cout << min(5,10) << "\n";
+	//other functions, such asquare root (sqrt), rounding number (round) and natural logarithm (log) can be found in the cmath header file.
+
+	cout << sqrt(64) << "\n";
+	cout << round(2.6) << "\n";
+	cout << log(2.71828) << "\n";
+	cout << exp(1) << "\n";
+	
+	//from the cmath library
+	/*
+	abs(x)	Returns the absolute value of x
+	acos(x)	Returns the arccosine of x, in radians
+	asin(x)	Returns the arcsine of x, in radians
+	atan(x)	Returns the arctangent of x, in radians
+	cbrt(x)	Returns the cube root of x
+	ceil(x)	Returns the value of x rounded up to its nearest integer
+	cos(x)	Returns the cosine of x, in radians
+	cosh(x)	Returns the hyperbolic cosine of x, in radians
+	exp(x)	Returns the value of Ex
+	expm1(x)	Returns ex -1
+	fabs(x)	Returns the absolute value of a floating x
+	fdim(x, y)	Returns the positive difference between x and y
+	floor(x)	Returns the value of x rounded down to its nearest integer
+	hypot(x, y)	Returns sqrt(x2 +y2) without intermediate overflow or underflow
+	fma(x, y, z)	Returns x*y+z without losing precision
+	fmax(x, y)	Returns the highest value of a floating x and y
+	fmin(x, y)	Returns the lowest value of a floating x and y
+	fmod(x, y)	Returns the floating point remainder of x/y
+	pow(x, y)	Returns the value of x to the power of y
+	sin(x)	Returns the sine of x (x is in radians)
+	sinh(x)	Returns the hyperbolic sine of a double value
+	tan(x)	Returns the tangent of an angle
+	tanh(x)	Returns the hyperbolic tangent of a double value
+	*/
+	
+	//C++ IF ... ELSE
+	//Conditions and if statements
+	//C++ supports the usual logical conditions from mathematics:
+	/*
+	Less than: a < b
+	Less than or equal to: a <= b
+	Greater than: a > b
+	Greater than or equal to: a >= b
+	Equal to a == b
+	Not Equal to: a != b
+	*/
+	//if
+	if (20>18){
+		cout << "20 is greater than 18\n";
+	}
+	
+	//if ... else
+	int time = 20;
+	if (time < 18){
+		cout << "Good day.\n";
+	}
+	else{
+		cout << "Good evening.\n";
+	}
+	
+	//if ... else if ... else
+	int newTime = 22;
+	if (newTime<10){
+		cout << "Good morning.\n";
+	}
+	else if (time <20){
+		cout << "Good day.\n";
+	}
+	else{
+		cout << "Good evening.\n";
+	}
+	
+	//short hand if ... else (ternary operator) because it consists of 3 operands.
+	int oldTime = 20;
+	string result = (oldTime < 18) ? "Good day.\n" : "Good evening.\n";
+	cout << result;
+	
+	//C++ SWITCH
+	int day = 4;
+	switch (day) {
+	  case 1:
+		cout << "Monday";
+		break;
+	  case 2:
+		cout << "Tuesday";
+		break;
+	  case 3:
+		cout << "Wednesday";
+		break;
+	  case 4:
+		cout << "Thursday";
+		break;
+	  case 5:
+		cout << "Friday";
+		break;
+	  case 6:
+		cout << "Saturday";
+		break;
+	  case 7:
+		cout << "Sunday";
+		break;
+	}
+	cout << "\n";
+	
+	return 0;
 }
