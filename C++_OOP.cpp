@@ -57,6 +57,58 @@ class theConstructor {
 		}
 };
 
+//Constructor parameters
+class boat {				//class name
+	public: 			//access specifier
+		string type; 		//attribute
+		int year; 		//attribute
+		boat(string x, int y){ // constructor with parameters
+			type = x;
+			year =y;
+		}
+
+		void whatBoat(){	//method
+			cout << "This is a " << type << " from " << year << "\n";
+		}
+};
+
+//Constructor definition outside the class
+class motorcycle {
+	public:
+		string make;
+		int engineSize;
+		int topSpeed;
+		motorcycle(string x, int y, int z);
+		void bikeDetails();
+};
+
+motorcycle::motorcycle(string x, int y,int z){
+	make=x;
+	engineSize=y;
+	topSpeed=z;
+};
+
+void motorcycle::bikeDetails(){
+	cout << "o/o>\n";
+	cout << "Make: " << make << "\n";
+	cout << "Engine Size: "  << engineSize <<" cc\n";
+	cout << "Top Speed: " << topSpeed << " mph\n";
+};
+
+//access specifiers
+/*
+public:	 	members are accessible from outside the class.
+private: 	members cannot be accessed fromt ouside the class.
+protected: 	members cannot be accessed from outside the class but can be accessed in inherited classes.
+by default all members are private if access specifier is not specified.*/
+
+class specifierClass {
+	public:
+		int x;
+	private:
+		int y;
+};
+
 //Create an object (instance of the class)
 int main(){
 	 myClass myObj; //create an object of myClass
@@ -103,7 +155,16 @@ int main(){
 	 cout << "max speed " << electricCar.vehicleSpeed(200) << " mph.\n";
 	 
 	 theConstructor constructorObj; //constructor method gets called automatically on object creation.
-	 
+	boat myBoat("yacht",2002);
+	myBoat.whatBoat();
+
+	motorcycle myBike("Hayabusa", 1299, 189);
+	myBike.bikeDetails();
+
+	specifierClass example;
+	example.x = 0; //Allowed (public)
+	// example.y= 2; //Not allowed (private)
+	// will cause (error: ‘int specifierClass::y’ is private within this context) during compilation.
+       	
 	 return 0;
 }
-
